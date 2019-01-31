@@ -24,7 +24,11 @@ if [[ $xr == *"$dp11"* && $xr == *"$dp12"* ]]; then
 	if [[ $chk != *"dual"* ]]; then
 		i3-msg "[workspace=1], move workspace to eDP-1" >/dev/null
 		i3-msg "[workspace=2], move workspace to DP-1-2" >/dev/null
+		i3-msg "[workspace=4], move workspace to DP-1-2" >/dev/null			
 		i3-msg "[workspace=3], move workspace to DP-1-1" >/dev/null
+		i3-msg "[workspace=5], move workspace to DP-1-1" >/dev/null
+		
+		
 		echo "dual" > ~/.screenlayout/.screen_setup
 	fi
 else
