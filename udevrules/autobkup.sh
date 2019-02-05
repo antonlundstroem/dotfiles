@@ -1,13 +1,16 @@
 #!/bin/bash
 
 
-#UUID=b7367d43-41a1-4d30-a9b8-3c372c3f2b3e
-
-#export DISPLAY=:0
-mount -U b7367d43-41a1-4d30-a9b8-3c372c3f2b3e /media/antlun/backup 
-/bin/su antlun -c "/usr/bin/notify-send 'hello'"
+UUID=b7367d43-41a1-4d30-a9b8-3c372c3f2b3e
 
 
+## FIX if it exists then mount and to the rest
 
-/bin/su antlun -c "/usr/bin/notify-send 'rsync done'"
+mount -U $UUID /media/antlun/backup 
+
+/bin/su antlun -c "/usr/bin/notify-send -u critical 'autobkup' 'rsync started'"
+
+rsync -q -aP --exclude-from=/home/antlun/dotfiles/rsync-homedir-excludes /home/antlun/ /media/antlun/backup
+
+/bin/su antlun -c "/usr/bin/notify-send -u critical 'autobkup' 'rsync complete'" 
 

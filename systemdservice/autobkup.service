@@ -1,5 +1,7 @@
 [UNIT]
-Description=Automount and autosynch, goes in /etc/systemd/system, created by antlun
+Description=Automount and autosynch, goes in /etc/systemd/system, created by antlun. Executes /usr/bin/autobkup.sh
+Requires=media-antlun-backup.mount
+After=media-antlun-backup.mount
 
 [Service]
 ExecStart=/usr/bin/autobkup.sh
