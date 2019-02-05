@@ -1,0 +1,14 @@
+# Udev rule to catch the partition with uuid and label and 
+# call the SYSTEMD service autobk.service
+# goes in /etc/udev/rules.d/
+ACTION=="add", \
+ENV{ID_FS_UUID}=="b7367d43-41a1-4d30-a9b8-3c372c3f2b3e", \
+ENV{ID_FS_LABEL}=="backup", \
+ENV{ID_MODEL}="Elements_10B8", \
+ATTR{partition}=="2", \
+ENV{SYSTEMD_WANTS}="autobkup.service"
+
+
+
+
+

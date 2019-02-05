@@ -1,0 +1,10 @@
+[UNIT]
+Description=Auto Mount and Rsync, created by antlun
+
+[Service]
+ExecStart=/usr/bin/autobkup.sh
+StandardOutput=null
+
+[Install]
+WantedBy=multi-user.target
+Alias=autobkup.service
