@@ -1,12 +1,11 @@
 source ~/dotfiles/mutt/muttcol
+source ~/dotfiles/mutt/personal.muttrc
 
 set ssl_starttls=yes
 set ssl_force_tls=yes
 
-set imap_user = 'anton.lundstroem@hotmail.se'
 set from= $imap_user
 set use_from=yes
-set realname='Your_Name'
 set folder = imaps://imap-mail.outlook.com:993
 set spoolfile = "+INBOX"
 set postponed="+[hotmail]/Drafts"
@@ -22,4 +21,3 @@ set record="+Sent"
 set editor='/usr/bin/vim'
 
 set sort='reverse-date'
-
