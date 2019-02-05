@@ -5,6 +5,12 @@
 # Script to set up the monitors after (un)plugging the monitors.
 #
 # TODO: Make more dynamic!
+#
+######################
+#
+#	This script is not used, but monitor swapping is instead handled by 
+#	dmenu script in ~/dotfiles/dmenu/*
+#
 #####################
 
 # Check if tmpfile exists that looks at current setup, else create
