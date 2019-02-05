@@ -1,6 +1,9 @@
 source ~/dotfiles/mutt/muttcol
 source ~/dotfiles/mutt/personal.muttrc
 
+#keybinds
+bind index G imap-fetch-mail
+
 set ssl_starttls=yes
 set ssl_force_tls=yes
 
