@@ -1,5 +1,5 @@
 [UNIT]
-Description=Auto Mount and Rsync, created by antlun
+Description=Automount and autosynch, goes in /etc/systemd/system, created by antlun
 
 [Service]
 ExecStart=/usr/bin/autobkup.sh
