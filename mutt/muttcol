@@ -34,7 +34,7 @@ color message cyan default
 color markers red white
 color attachment white default
 color search brightmagenta default
-color status yellow black
+color status white black
 color hdrdefault brightgreen default
 color quoted green default
 color quoted1 yellow default

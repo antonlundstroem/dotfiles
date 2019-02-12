@@ -94,7 +94,7 @@ bindsym $mod+a focus parent
 
 ###############
 #
-# Self defined workspace names
+# self defined workspace names
 #
 ###############
 
@@ -163,7 +163,7 @@ bindsym $mod+r mode "resize"
 
 ###############
 #
-# Self-defined variables
+# self-defined variables
 #
 ###############
 
@@ -171,7 +171,7 @@ set $dmenu_monitor "/home/antlun/dotfiles/dmenu/monitorconfig.sh 'monitor'"
 
 ###############
 #
-# Self-defined keybinds
+# self-defined keybinds
 #
 ###############
 
@@ -197,10 +197,19 @@ bindsym Ctrl+Shift+2 exec --no-startup-id setxkbmap us
 #printscreen button
 bindsym Print exec gnome-screenshot -i
 
+#start calcurse [terminal based calendar]
+bindsym $mod+Ctrl+p exec i3-sensible-terminal -e calcurse
+
+#start mutt [terminal based email app]
+bindsym $mod+Ctrl+u exec i3-sensible-terminal -e mutt
+
+#start irssi [temrinal based irc client]
+bindsym $mod+Ctrl+i exec i3-sensible-terminal -e irssi
+
 
 ###############
 #
-# Self-defined executables
+# self-defined executables
 #
 ###############
 
@@ -209,7 +218,7 @@ exec feh --bg-scale ~/pic/wallpaper/interstellar.jpg
 
 ##########
 #
-# Set colors to use in the configuration files
+# set colors to use in the configuration files
 #
 #########
 #set $border-color

@@ -10,7 +10,7 @@ mount -U $UUID /media/antlun/backup
 
 /bin/su antlun -c "/usr/bin/notify-send -u critical 'autobkup' 'rsync started'"
 
-rsync -q -aP --exclude-from=/home/antlun/dotfiles/rsync-homedir-excludes /home/antlun/ /media/antlun/backup
+rsync --delete -q -aP --exclude-from=/home/antlun/dotfiles/rsync-homedir-excludes /home/antlun/ /media/antlun/backup
 
 /bin/su antlun -c "/usr/bin/notify-send -u critical 'autobkup' 'rsync complete'" 
 
