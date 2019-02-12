@@ -207,8 +207,8 @@ bindsym $mod+Ctrl+u exec i3-sensible-terminal -T "mutt" -e mutt
 bindsym $mod+Ctrl+i exec i3-sensible-terminal -T "irssi" -e irssi
 
 #start ranger [terminal based file navigator]
-bindsym $mod+Ctrl+r exec i3-sensible-terminal -T "ranger" -e ranger
-for_window[title="ranger"] floating enable
+bindsym $mod+Ctrl+r exec i3-sensible-terminal -T "ranger_wm" -e ranger
+for_window[title="ranger_wm"] floating enable
 
 
 ###############
