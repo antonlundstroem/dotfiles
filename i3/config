@@ -198,13 +198,17 @@ bindsym Ctrl+Shift+2 exec --no-startup-id setxkbmap us
 bindsym Print exec gnome-screenshot -i
 
 #start calcurse [terminal based calendar]
-bindsym $mod+Ctrl+p exec i3-sensible-terminal -e calcurse
+bindsym $mod+Ctrl+p exec i3-sensible-terminal -T "calcurse" -e calcurse
 
 #start mutt [terminal based email app]
-bindsym $mod+Ctrl+u exec i3-sensible-terminal -e mutt
+bindsym $mod+Ctrl+u exec i3-sensible-terminal -T "mutt" -e mutt
 
-#start irssi [temrinal based irc client]
-bindsym $mod+Ctrl+i exec i3-sensible-terminal -e irssi
+#start irssi [terminal based irc client]
+bindsym $mod+Ctrl+i exec i3-sensible-terminal -T "irssi" -e irssi
+
+#start ranger [terminal based file navigator]
+bindsym $mod+Ctrl+r exec i3-sensible-terminal -T "ranger" -e ranger
+for_window[title="ranger"] floating enable
 
 
 ###############
