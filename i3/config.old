@@ -36,7 +36,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run -nb '#000000' -sf '#000000' -sb '#ffffff' -nf '#ffffff' 
+bindsym $mod+d exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -210,11 +210,6 @@ bindsym $mod+Ctrl+i exec i3-sensible-terminal -T "irssi" -e irssi
 bindsym $mod+Ctrl+r exec i3-sensible-terminal -T "ranger_wm" -e ranger
 for_window[title="ranger_wm"] floating enable
 
-bindsym $mod+Ctrl+n exec i3-sensible-terminal -T "ncmpcpp" -e ncmpcpp
-
-#start qutebrowser
-bindsym $mod+q exec qutebrowser
-#for_window[title=qutebrowser] border none
 
 ###############
 #
@@ -234,23 +229,21 @@ exec feh --bg-scale ~/pic/wallpaper/interstellar.jpg
 #set $inactive-border-color
 
 # bar background color
-#set $bar-bg-color #282c33
+set $bar-bg-color #282c33
+
 # general background color
-#set $bg-color #724302
-#set $inactive-bg-color #282c33
-#set $text-color #010102
-#set $inactive-text-color #010102
+set $bg-color #724302
+set $inactive-bg-color #282c33
 
-set $black #000000
-set $white #efefef
-new_window normal 1 px
+set $text-color #010102
+set $inactive-text-color #010102
 
-#set $urgent-bg-color #010102
+set $urgent-bg-color #010102
 ##########
 # window colors		border			background		text			indicator
-client.focused		$white		$white		$black		$white
-client.unfocused	$black		$black		$white		$white
-client.focused_inactive $black		$black		$white		$white
+client.focused		$bg-color		$bg-color		$text-color		#00ff00
+client.unfocused	$inactive-bg-color	$inactive-bg-color	$text-color		#00ff00
+client.focused_inactive $inactive-bg-color	$inactive-bg-color	$text-color		#00ff00
 
 
 # Start i3bar to display a workspace bar (plus the system information i3status
@@ -259,13 +252,13 @@ bar {
         status_command i3blocks -c ~/.config/i3/i3blocks.conf
 	position bottom
 	colors {
-	background $black
-	separator $black
-	################	border		background	text
-	focused_workspace 	$white		$white		$black		
-	inactive_workspace	$black		$black		$white
-	urgent_workspace	$black		$black		$white
-	active_workspace	$black		$black		$white
+	background $bar-bg-color
+	separator #757575
+	################	border		background		text
+	focused_workspace 	$bg-color	$bg-color		#ffffff		
+	#inactive_workspace	$bg-color	$bg-color		$text-color
+	#urgent_workspace
+
 	}
 }
 
