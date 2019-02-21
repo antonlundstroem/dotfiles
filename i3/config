@@ -176,7 +176,7 @@ set $dmenu_monitor "/home/antlun/dotfiles/dmenu/monitorconfig.sh 'monitor'"
 ###############
 
 # Monitor configuration for swapping between single/dual monitor setup
-bindsym $mod+Shift+m exec $dmenu_monitor 
+bindsym $mod+Ctrl+m exec $dmenu_monitor 
 
 # i3lock hotkey
 bindsym $mod+Shift+x exec i3lock --color "$bar-bg-color"
