@@ -213,7 +213,7 @@ for_window[title="ranger_wm"] floating enable
 bindsym $mod+Ctrl+n exec i3-sensible-terminal -T "ncmpcpp" -e ncmpcpp
 
 #start qutebrowser
-bindsym $mod+q exec qutebrowser
+bindsym $mod+q exec firefox
 #for_window[title=qutebrowser] border none
 
 ###############
@@ -222,7 +222,9 @@ bindsym $mod+q exec qutebrowser
 #
 ###############
 
-exec feh --bg-scale ~/pic/wallpaper/interstellar.jpg
+#exec feh --bg-scale ~/pic/wallpaper/interstellar.jpg
+#exec feh --bg-center ~/pic/wallpaper/moreeff.jpg
+exec feh --bg-scale ~/pic/wallpaper/moreeff2.jpg
 #exec_always ~/.screenlayout/setmonitor.sh
 
 ##########
@@ -241,16 +243,18 @@ exec feh --bg-scale ~/pic/wallpaper/interstellar.jpg
 #set $text-color #010102
 #set $inactive-text-color #010102
 
+set $solard #003d4d
+set $gray #404040
 set $black #000000
-set $white #efefef
+set $white #cce6ff
 new_window normal 1 px
 
 #set $urgent-bg-color #010102
 ##########
 # window colors		border			background		text			indicator
 client.focused		$white		$white		$black		$white
-client.unfocused	$black		$black		$white		$white
-client.focused_inactive $black		$black		$white		$white
+client.unfocused	$solard		$solard		$white		$white
+client.focused_inactive $solard		$solard		$white		$white
 
 
 # Start i3bar to display a workspace bar (plus the system information i3status
@@ -259,13 +263,13 @@ bar {
         status_command i3blocks -c ~/.config/i3/i3blocks.conf
 	position bottom
 	colors {
-	background $black
-	separator $black
+	background $solard
+	separator $solard
 	################	border		background	text
 	focused_workspace 	$white		$white		$black		
-	inactive_workspace	$black		$black		$white
-	urgent_workspace	$black		$black		$white
-	active_workspace	$black		$black		$white
+	inactive_workspace	$solard		$solard		$white
+	urgent_workspace	$solard		$solard		$white
+	active_workspace	$solard		$solard		$white
 	}
 }
 

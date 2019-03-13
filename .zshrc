@@ -12,6 +12,7 @@ export ZSH="/home/antlun/.oh-my-zsh"
 #
 ######
 alias ytdl="~/.scripts/ytdl.sh"
+alias 0x0="~/.scripts/0x0.sh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
