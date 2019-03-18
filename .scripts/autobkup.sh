@@ -1,8 +1,6 @@
 #!/bin/bash
 
-
 UUID=b7367d43-41a1-4d30-a9b8-3c372c3f2b3e
-
 
 ## FIX if it exists then mount and to the rest
 
