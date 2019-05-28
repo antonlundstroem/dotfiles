@@ -47,6 +47,7 @@ bindsym $mod+j focus left
 bindsym $mod+k focus down
 bindsym $mod+l focus up
 bindsym $mod+semicolon focus right
+bindsym $mod+ö focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -182,9 +183,9 @@ bindsym $mod+Ctrl+m exec $dmenu_monitor
 bindsym $mod+Shift+x exec i3lock --color "$black"
 
 # Multimedia Keys
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 1 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume 1 -5% #decrease sound volume
-bindsym XF86AudioMute exec pactl set-sink-mute 1 toggle # mute sound
+bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
+bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
+bindsym XF86AudioMute exec amixer -q set Master toggle
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
@@ -210,10 +211,16 @@ bindsym $mod+Ctrl+i exec i3-sensible-terminal -T "irssi" -e irssi
 bindsym $mod+Ctrl+r exec i3-sensible-terminal -T "ranger_wm" -e ranger
 for_window[title="ranger_wm"] floating enable
 
+#start ncmpcpp [terminal based music client]
 bindsym $mod+Ctrl+n exec i3-sensible-terminal -T "ncmpcpp" -e ncmpcpp
 
-#start qutebrowser
+#start mps-youtube [terminal based youtube player"
+bindsym $mod+Ctrl+y exec i3-sensible-terminal -T "mpsyt" -e mpsyt
+
+#start firefox
 bindsym $mod+q exec firefox
+#start qutebrowser
+bindsym $mod+Ctrl+q exec qutebrowser
 #for_window[title=qutebrowser] border none
 
 ###############
@@ -224,7 +231,7 @@ bindsym $mod+q exec firefox
 
 #exec feh --bg-scale ~/pic/wallpaper/interstellar.jpg
 #exec feh --bg-center ~/pic/wallpaper/moreeff.jpg
-exec feh --bg-scale ~/pic/wallpaper/moreeff2.jpg
+exec feh --bg-scale ~/pic/wallpaper/nostalgia.jpg
 #exec_always ~/.screenlayout/setmonitor.sh
 
 ##########
